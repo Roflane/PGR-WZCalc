@@ -47,6 +47,7 @@ void data_io(uint32_t &option, WarzoneData &wzData) {
     "2 - Second\n"
     "3 - Mixed\n~ ");
     CIN(option);
+    if (option < c32(EOption::First) || option > c32(EOption::Mixed)) return;
 
     LOG("Enter total damage: ");
     CIN(wzData.totalDamage);
