@@ -79,8 +79,8 @@ void data_io(uint32_t &option, WarzoneData &wzData) {
 
         LOG("Approximate score: %d\n", wzData.score);
         LOG("Press enter to proceed\n");
-        getchar(); getchar();
-        continue;
+        std::cin.ignore();
+        std::cin.get();
     }
 }
 
